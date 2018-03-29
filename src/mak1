@@ -1,0 +1,21 @@
+SRCS = \
+block.cpp \
+board.cpp \
+boardcomparison.cpp \
+candidates.cpp \
+cell.cpp \
+column.cpp \
+grid.cpp \
+main.cpp \
+point.cpp \
+row.cpp \
+sudoku.cpp \
+sudokucallback.cpp \
+sudokuinit.cpp 
+OBJS = $(SRCS:.cpp=.o)
+.PHONY: all
+clean:
+		rm -f $(OBJS)
+sudoku:	$(OBJS)
+		echo $(OBJS)
+		g++ -g -o $@ $(OBJS)
